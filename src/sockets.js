@@ -68,7 +68,7 @@ export default io => {
 
     // Actualizo la cantidad de usuarios conectados con cada desconexión y la mustro por consola.
     socket.on("disconnect", () => {
-      now = new Date().toLocaleTimeString();
+      //now = new Date().toLocaleTimeString();
       logger.debug(
         `** Conexiones websocket activas: ${io.engine.clientsCount} **`
       );

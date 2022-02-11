@@ -37,6 +37,12 @@ app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// middleware para loguear cada request
+app.use((req, res, next) => {
+  logger.info(`[Request] '${req.baseUrl + req.path}' método [${req.method}]`);
+  next();
+});
+
 app.use(express.static(path.join(__dirname, "public"))); // comentar si utilizo Nginx como servidor de recursos estáticos
 
 // ELECCIÓN DE SESSION STORE: MONGOSTORE ****************

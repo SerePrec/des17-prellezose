@@ -26,6 +26,7 @@ try {
   );
 } catch (error) {
   logger.error(`Error al conectar con MongoDb: ${error}`);
+  process.exit(1);
 }
 
 class ContenedorMongoDB {
