@@ -1,5 +1,6 @@
 import Knex from "knex";
 import { deepClone, verifyTimestamp } from "../utils/dataTools.js";
+import { logger } from "../logger/index.js";
 
 class ContenedorSQL {
   constructor(config, table) {
@@ -11,7 +12,7 @@ class ContenedorSQL {
   async save(data) {
     try {
       const [newId] = await this.knex(this.table).insert(data);
-      console.log("Elemento guardado con éxito");
+      logger.debug("Elemento guardado con éxito");
       // Pido el elemento por si hay campos que se generan al insertar y no dispongo de ellos para devolver. Ej timestamp
       const newElement = await this.getById(newId);
       return deepClone(newElement);
@@ -47,7 +48,6 @@ class ContenedorSQL {
   //actualizo un elemento por su id
   async updateById(id, data) {
     try {
-      console.log(data);
       id = parseInt(id);
       const dataToUpdate = {};
       for (const key in data) {
@@ -59,10 +59,10 @@ class ContenedorSQL {
         .update(dataToUpdate);
       if (updated) {
         const updateElement = await this.getById(id);
-        console.log(`El elemento con id: ${id} se actualizó con éxito`);
+        logger.debug(`El elemento con id: ${id} se actualizó con éxito`);
         return deepClone(verifyTimestamp(updateElement));
       } else {
-        console.log(`No se encontró el elemento con el id: ${id}`);
+        logger.debug(`No se encontró el elemento con el id: ${id}`);
         return null;
       }
     } catch (error) {
@@ -76,7 +76,7 @@ class ContenedorSQL {
   async deleteAll(conditions = {}) {
     try {
       await this.knex(this.table).where(conditions).del();
-      console.log("Todos los elementos borrados con éxito");
+      logger.debug("Todos los elementos borrados con éxito");
       return true;
     } catch (error) {
       throw new Error(`Error al borrar todos los elementos: ${error}`);
@@ -89,10 +89,10 @@ class ContenedorSQL {
       id = parseInt(id);
       const deleted = await this.knex(this.table).where({ id }).del();
       if (deleted) {
-        console.log(`El elemento con id: ${id} se eliminó con éxito`);
+        logger.debug(`El elemento con id: ${id} se eliminó con éxito`);
         return id;
       } else {
-        console.log(`No se encontró el elemento con el id: ${id}`);
+        logger.debug(`No se encontró el elemento con el id: ${id}`);
         return null;
       }
     } catch (error) {

@@ -1,11 +1,12 @@
 import { productsModel } from "../models/index.js";
+import { logger } from "../logger/index.js";
 
 export const getAllProducts = async (req, res) => {
   try {
     const lista = await productsModel.getAll();
     res.json(lista);
   } catch (error) {
-    console.log(error);
+    logger.error(error);
     res.status(500).json({
       error: "No se pudo recuperar la infomación"
     });
@@ -17,9 +18,10 @@ export const createProduct = async (req, res) => {
     let { title, price, thumbnail } = req.body;
     let newProduct = { title, price, thumbnail };
     newProduct = await productsModel.save(newProduct);
+    logger.info("Producto creado con éxito");
     res.json({ result: "ok", newProduct });
   } catch (error) {
-    console.log(error);
+    logger.error(error);
     res.status(500).json({
       error: "No se pudo agregar el producto"
     });
@@ -33,7 +35,7 @@ export const getProduct = async (req, res) => {
       ? res.json(producto)
       : res.json({ error: "Producto no encontrado" });
   } catch (error) {
-    console.log(error);
+    logger.error(error);
     res.status(500).json({
       error: "No se pudo recuperar la infomación"
     });
@@ -46,11 +48,15 @@ export const updateProduct = async (req, res) => {
     const { id } = req.params;
     let updateProduct = { title, price, thumbnail };
     updateProduct = await productsModel.updateById(id, updateProduct);
-    updateProduct !== null
-      ? res.json({ result: "ok", updateProduct })
-      : res.json({ error: "Producto no encontrado" });
+    if (updateProduct !== null) {
+      logger.info("Producto actualizado con éxito");
+      res.json({ result: "ok", updateProduct });
+    } else {
+      logger.warn("Producto no encontrado");
+      res.json({ error: "Producto no encontrado" });
+    }
   } catch (error) {
-    console.log(error);
+    logger.error(error);
     res.status(500).json({
       error: "No se pudo actualizar el producto"
     });
@@ -60,11 +66,15 @@ export const updateProduct = async (req, res) => {
 export const deleteProduct = async (req, res) => {
   try {
     const deletedId = await productsModel.deleteById(req.params.id);
-    deletedId !== null
-      ? res.json({ result: "ok", deletedId })
-      : res.json({ error: "Producto no encontrado" });
+    if (deletedId !== null) {
+      logger.info("Producto borrado con éxito");
+      res.json({ result: "ok", deletedId });
+    } else {
+      logger.warn("Producto no encontrado");
+      res.json({ error: "Producto no encontrado" });
+    }
   } catch (error) {
-    console.log(error);
+    logger.error(error);
     res.status(500).json({
       error: "No se pudo eliminar el producto"
     });

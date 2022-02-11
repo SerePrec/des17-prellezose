@@ -2,6 +2,7 @@ import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 import { userModel } from "../models/index.js";
 import { createHash, isValidPassword } from "../utils/crypt.js";
+import { logger } from "../logger/index.js";
 
 passport.use(
   "register",
@@ -20,10 +21,10 @@ passport.use(
           password: createHash(password)
         };
         const newUserAdded = await userModel.save(newUser);
-        console.log(`Usuario registrado con éxito con id ${newUserAdded.id}`);
+        logger.info(`Usuario registrado con éxito con id ${newUserAdded.id}`);
         return done(null, newUserAdded);
       } catch (error) {
-        console.log("Error al registrar usuario: ", error);
+        logger.error("Error al registrar usuario: ", error);
         done(error);
       }
     }
@@ -45,9 +46,10 @@ passport.use(
           message: "Nombre de usuario y/o contraseña incorrectos"
         });
       }
+      logger.info("Usuario logueado con éxito");
       return done(null, user);
     } catch (error) {
-      console.log("Error al loguear usuario: ", error);
+      logger.error("Error al loguear usuario: ", error);
       done(error);
     }
   })

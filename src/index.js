@@ -3,6 +3,7 @@ import cluster from "cluster";
 import { Server as IoServer } from "socket.io";
 import { createAdapter, setupPrimary } from "@socket.io/cluster-adapter";
 import config from "./config.js";
+import { logger } from "./logger/index.js";
 
 const MODE = config.MODE;
 
@@ -25,19 +26,19 @@ async function startServer() {
   // Puesta en marcha del servidor
   httpServer
     .listen(PORT, () =>
-      console.log(
+      logger.info(
         `Servidor http con websockets escuchando en el puerto ${
           httpServer.address().port
         } - WORKER PID ${process.pid}`
       )
     )
     .on("error", error =>
-      console.log(`Ocurrió un error en el servidor:\n ${error}`)
+      logger.error(`Ocurrió un error en el servidor:\n ${error}`)
     );
 }
 
 if (MODE === "cluster" && cluster.isPrimary) {
-  console.log(`Proceso Master iniciado con PID ${process.pid}`);
+  logger.info(`Proceso Master iniciado con PID ${process.pid}`);
 
   // setup conexiones entre workers
   setupPrimary();
@@ -47,7 +48,7 @@ if (MODE === "cluster" && cluster.isPrimary) {
   }
 
   cluster.on("exit", (worker, code, signal) => {
-    console.log(
+    logger.warn(
       `Worker con PID ${worker.process.pid} terminado - ${
         signal || code
       } - [${new Date().toLocaleString()}]`
@@ -55,4 +56,4 @@ if (MODE === "cluster" && cluster.isPrimary) {
     cluster.fork();
   });
 } else if (MODE === "cluster" || MODE === "fork") startServer();
-else console.log(`Parámetro 'mode' inválido`);
+else logger.error(`Parámetro 'mode' inválido`);

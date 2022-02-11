@@ -1,3 +1,5 @@
+import { logger } from "../logger/index.js";
+
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -11,7 +13,7 @@ function getRandomNumbers(min, max, qty) {
   return randoms;
 }
 
-console.log(
+logger.info(
   `Child Process 'calcRandomNumbers' iniciado con pid:${process.pid}`
 );
 process.on("message", msg => {

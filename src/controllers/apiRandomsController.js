@@ -1,6 +1,7 @@
 import { fork } from "child_process";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
+import { logger } from "../logger/index.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -21,13 +22,13 @@ export const getRandoms = (req, res) => {
       else res.json(msg);
     });
     child.on("error", error => {
-      console.log(
+      logger.error(
         `Error en Child process 'calcRandomNumbers' con pid:${child.pid}:\n${error}`
       );
       res.status(500).send({ error: "error interno del servidor" });
     });
     child.on("close", code => {
-      console.log(
+      logger.info(
         `Child process 'calcRandomNumbers' con pid:${child.pid} terminado con código ${code}`
       );
       if (code !== 0)

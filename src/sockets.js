@@ -1,13 +1,14 @@
 import { productsModel, messagesModel } from "./models/index.js";
 import { escapeHtml, normalizeMessages } from "./utils/messageTools.js";
+import { logger } from "./logger/index.js";
 
 //Configuración de sockets
 export default io => {
   io.on("connection", async socket => {
     const socketId = socket.id;
-    let now = new Date().toLocaleTimeString();
-    console.log(
-      `[${now}] Cliente socket conectado con id: ${socketId}\n** Conexiones websocket activas en servidor PID ${process.pid}: ${io.engine.clientsCount} **`
+    //let now = new Date().toLocaleTimeString();
+    logger.debug(
+      `Cliente socket conectado con id: ${socketId}\n** Conexiones websocket activas: ${io.engine.clientsCount} **`
     );
 
     //Obtiene listado de productos con cada conexión entrante y lo envía al socket
@@ -15,7 +16,7 @@ export default io => {
       const list = await productsModel.getAll();
       socket.emit("allProducts", list);
     } catch (error) {
-      console.log(error);
+      logger.error(error);
       socket.emit("productErrors", "No se pudo recuperar archivo de productos");
     }
 
@@ -28,7 +29,7 @@ export default io => {
       const normalizedMessages = normalizeMessages(messages);
       socket.emit("allMessages", normalizedMessages);
     } catch (error) {
-      console.log(error);
+      logger.error(error);
       socket.emit("messageErrors", "No se pudo recuperar archivo de mensajes");
     }
 
@@ -42,7 +43,7 @@ export default io => {
           io.sockets.emit("allProducts", list);
         }
       } catch (error) {
-        console.log(error);
+        logger.error(error);
         socket.emit("productErrors", "No se pudo agregar el producto");
       }
     });
@@ -60,7 +61,7 @@ export default io => {
         const normalizedMessages = normalizeMessages(messages);
         io.sockets.emit("allMessages", normalizedMessages);
       } catch (error) {
-        console.log(error);
+        logger.error(error);
         socket.emit("messageErrors", "Error al procesar el mensaje enviado");
       }
     });
@@ -68,8 +69,8 @@ export default io => {
     // Actualizo la cantidad de usuarios conectados con cada desconexión y la mustro por consola.
     socket.on("disconnect", () => {
       now = new Date().toLocaleTimeString();
-      console.log(
-        `[${now}] ** Conexiones websocket activas en servidor PID ${process.pid}: ${io.engine.clientsCount} **`
+      logger.debug(
+        `** Conexiones websocket activas: ${io.engine.clientsCount} **`
       );
       //io.sockets.emit("usersCount", io.engine.clientsCount);
     });

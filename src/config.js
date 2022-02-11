@@ -19,6 +19,7 @@ const config = {
   PORT: process.env.PORT || Number(argv.PORT) || 8080,
   MODE: process.env.MODE || argv.MODE || "fork",
   numCPUs: os.cpus().length,
+  logsFolder: path.join(__dirname, "logs"),
   fileSystemDb: {
     path: path.join(__dirname, "..", "DB"),
     messagesFile: "mensajes.json",
