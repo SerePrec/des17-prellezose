@@ -25,6 +25,22 @@ export const getProductosMock = (req, res) => {
 };
 
 export const showAppInfo = (req, res) => {
+  console.log(
+    "Esta es la app info para presentar:\n",
+    JSON.stringify({
+      title: "App Info",
+      SO: process.platform,
+      nodeVersion: process.version,
+      execPath: process.execPath,
+      proyectPath: process.cwd(),
+      args:
+        process.argv.length > 2 ? process.argv.slice(2).join(", ") : "ninguno",
+      pid: process.pid,
+      rss: Math.round(process.memoryUsage().rss / 1024),
+      CPUs: config.numCPUs
+    })
+  );
+
   res.render("./pages/appInfo", {
     title: "App Info",
     SO: process.platform,

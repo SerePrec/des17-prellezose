@@ -1,0 +1,760 @@
+Statistical profiling result from fork-ccl-v8.log, (2357 ticks, 1 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   1835   77.9%          /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+     55    2.3%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      4    0.2%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+      1    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     14    0.6%    3.0%  RegExp: [ \t]*<%_
+      9    0.4%    1.9%  LazyCompile: *normalizeString node:path:66:25
+      9    0.4%    1.9%  LazyCompile: *next /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/index.js:176:16
+      8    0.3%    1.7%  LazyCompile: *resolve node:path:1091:10
+      7    0.3%    1.5%  LazyCompile: *readPackage node:internal/modules/cjs/loader:290:21
+      3    0.1%    0.6%  RegExp: _%>[ \t]*
+      3    0.1%    0.6%  RegExp: (<%%|%%>|<%=|<%-|<%_|<%#|<%|%>|-%>|_%>)
+      3    0.1%    0.6%  LazyCompile: *scanLine /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:803:22
+      3    0.1%    0.6%  Function: ^getEncodingOps node:buffer:678:24
+      3    0.1%    0.6%  Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2    0.1%    0.4%  RegExp: d{1,4}|M{1,4}|YY(?:YY)?|S{1,3}|Do|ZZ|Z|([HhMsDm])\1?|[aA]|"[^"]*"|'[^']*'
+      2    0.1%    0.4%  Function: ^Writable.write node:internal/streams/writable:333:36
+      2    0.1%    0.4%  Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1    0.0%    0.2%  RegExp: ;(\s*$)
+      1    0.0%    0.2%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      1    0.0%    0.2%  LazyCompile: *readFileSync node:fs:450:22
+      1    0.0%    0.2%  LazyCompile: *parseTemplateText /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:749:31
+      1    0.0%    0.2%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      1    0.0%    0.2%  LazyCompile: *module.exports /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/utils-merge/index.js:16:36
+      1    0.0%    0.2%  LazyCompile: *extname node:path:1385:10
+      1    0.0%    0.2%  LazyCompile: *exports.shallowCopyFromList /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/utils.js:135:40
+      1    0.0%    0.2%  LazyCompile: *emit node:events:340:44
+      1    0.0%    0.2%  LazyCompile: *compileFunction node:vm:308:25
+      1    0.0%    0.2%  LazyCompile: *compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:569:21
+      1    0.0%    0.2%  LazyCompile: *basename node:path:1306:11
+      1    0.0%    0.2%  LazyCompile: *Writable.write /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_writable.js:288:37
+      1    0.0%    0.2%  LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    0.0%    0.2%  LazyCompile: *<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:730:32
+      1    0.0%    0.2%  Function: ^writeOrBuffer node:internal/streams/writable:365:23
+      1    0.0%    0.2%  Function: ^write node:buffer:1050:40
+      1    0.0%    0.2%  Function: ^wrapConversion /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/color/node_modules/color-convert/route.js:63:24
+      1    0.0%    0.2%  Function: ^tryHandleCache /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:252:24
+      1    0.0%    0.2%  Function: ^trim_prefix /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/index.js:288:23
+      1    0.0%    0.2%  Function: ^serveStatic /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/serve-static/index.js:72:31
+      1    0.0%    0.2%  Function: ^send /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/response.js:107:25
+      1    0.0%    0.2%  Function: ^scanLine /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:803:22
+      1    0.0%    0.2%  Function: ^resolve node:path:1091:10
+      1    0.0%    0.2%  Function: ^readFileSync node:fs:450:22
+      1    0.0%    0.2%  Function: ^preferredEncodings /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/negotiator/lib/encoding.js:138:28
+      1    0.0%    0.2%  Function: ^pad /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/fecha/lib/fecha.umd.js:88:22
+      1    0.0%    0.2%  Function: ^onResponseHeaders /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/compression/index.js:140:47
+      1    0.0%    0.2%  Function: ^normalizeEncoding node:internal/util:160:27
+      1    0.0%    0.2%  Function: ^next /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/index.js:176:16
+      1    0.0%    0.2%  Function: ^needFinish /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_writable.js:585:20
+      1    0.0%    0.2%  Function: ^multiplication32 /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/faker/vendor/mersenne.js:88:29
+      1    0.0%    0.2%  Function: ^isstats /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/etag/index.js:104:18
+      1    0.0%    0.2%  Function: ^isFull node:internal/fixed_queue:71:9
+      1    0.0%    0.2%  Function: ^isAbsolute node:path:1156:13
+      1    0.0%    0.2%  Function: ^include /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:685:30
+      1    0.0%    0.2%  Function: ^handleErrorFromBinding node:internal/fs/utils:340:32
+      1    0.0%    0.2%  Function: ^handle /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/application.js:158:29
+      1    0.0%    0.2%  Function: ^getStatsFromBinding node:internal/fs/utils:530:29
+      1    0.0%    0.2%  Function: ^getHeader node:_http_outgoing:590:57
+      1    0.0%    0.2%  Function: ^getEncodingPriority /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/negotiator/lib/encoding.js:98:29
+      1    0.0%    0.2%  Function: ^get node:internal/streams/readable:1268:8
+      1    0.0%    0.2%  Function: ^get node:internal/console/constructor:202:14
+      1    0.0%    0.2%  Function: ^generateSource /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:709:28
+      1    0.0%    0.2%  Function: ^deserializeObject /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/parser/deserializer.js:65:27
+      1    0.0%    0.2%  Function: ^basename node:path:1306:11
+      1    0.0%    0.2%  Function: ^anonymous /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:684:59
+      1    0.0%    0.2%  Function: ^alignPool node:buffer:158:19
+      1    0.0%    0.2%  Function: ^_addListener node:events:418:22
+      1    0.0%    0.2%  Function: ^WritableState.onwrite /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_writable.js:159:27
+      1    0.0%    0.2%  Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    0.0%    0.2%  Function: ^DerivedLogger.<computed> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/winston/lib/winston/create-logger.js:71:47
+      1    0.0%    0.2%  Function: ^<anonymous> node:internal/validators:221:42
+
+ [C++]:
+   ticks  total  nonlib   name
+    116    4.9%   25.1%  epoll_pwait
+     58    2.5%   12.6%  __write
+     53    2.2%   11.5%  fwrite
+     16    0.7%    3.5%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+     12    0.5%    2.6%  _IO_file_xsputn
+     11    0.5%    2.4%  __libc_read
+      9    0.4%    1.9%  syscall
+      9    0.4%    1.9%  __libc_malloc
+      8    0.3%    1.7%  __pthread_cond_wait
+      5    0.2%    1.1%  std::ostream::sentry::sentry(std::ostream&)
+      5    0.2%    1.1%  __mprotect
+      3    0.1%    0.6%  __lll_lock_wait
+      3    0.1%    0.6%  __libc_write
+      3    0.1%    0.6%  __GI___pthread_mutex_lock
+      3    0.1%    0.6%  _IO_default_xsputn
+      2    0.1%    0.4%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      2    0.1%    0.4%  fputc
+      2    0.1%    0.4%  cfree
+      2    0.1%    0.4%  __libc_open
+      1    0.0%    0.2%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.0%    0.2%  std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)
+      1    0.0%    0.2%  std::ostream& std::ostream::_M_insert<long>(long)
+      1    0.0%    0.2%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      1    0.0%    0.2%  sigaddset
+      1    0.0%    0.2%  operator new[](unsigned long, std::nothrow_t const&)
+      1    0.0%    0.2%  operator delete(void*)
+      1    0.0%    0.2%  epoll_ctl
+      1    0.0%    0.2%  do_futex_wait.constprop.0
+      1    0.0%    0.2%  accept4
+      1    0.0%    0.2%  __pthread_rwlock_tryrdlock
+      1    0.0%    0.2%  __pthread_cond_signal
+      1    0.0%    0.2%  __munmap
+      1    0.0%    0.2%  __errno_location
+      1    0.0%    0.2%  __GI___pthread_mutex_unlock
+      1    0.0%    0.2%  __GI___pthread_getspecific
+      1    0.0%    0.2%  _IO_padn
+      1    0.0%    0.2%  _IO_file_sync
+
+ [Summary]:
+   ticks  total  nonlib   name
+    121    5.1%   26.2%  JavaScript
+    340   14.4%   73.6%  C++
+    236   10.0%   51.1%  GC
+   1895   80.4%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     53   29.6%    2.2%  __write
+     51   28.5%    2.2%  fwrite
+     16    8.9%    0.7%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+     10    5.6%    0.4%  _IO_file_xsputn
+      9    5.0%    0.4%  syscall
+      8    4.5%    0.3%  __libc_malloc
+      5    2.8%    0.2%  std::ostream::sentry::sentry(std::ostream&)
+      3    1.7%    0.1%  __libc_write
+      3    1.7%    0.1%  __libc_read
+      2    1.1%    0.1%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      2    1.1%    0.1%  fputc
+      2    1.1%    0.1%  __mprotect
+      2    1.1%    0.1%  __libc_open
+      2    1.1%    0.1%  _IO_default_xsputn
+      1    0.6%    0.0%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.6%    0.0%  std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)
+      1    0.6%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      1    0.6%    0.0%  operator new[](unsigned long, std::nothrow_t const&)
+      1    0.6%    0.0%  operator delete(void*)
+      1    0.6%    0.0%  __pthread_rwlock_tryrdlock
+      1    0.6%    0.0%  __errno_location
+      1    0.6%    0.0%  __GI___pthread_mutex_unlock
+      1    0.6%    0.0%  __GI___pthread_mutex_lock
+      1    0.6%    0.0%  _IO_padn
+      1    0.6%    0.0%  _IO_file_sync
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1835   77.9%  /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+   1074   58.5%    /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+    296   27.6%      Function: ^compileFunction node:vm:308:25
+    291   98.3%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+    290   99.7%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+    283   97.6%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      7    2.4%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      3    1.0%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      3  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      3  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     63    5.9%      /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+     19   30.2%        LazyCompile: *scanLine /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:803:22
+     12   63.2%          LazyCompile: *<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:730:32
+      9   75.0%            LazyCompile: *compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:569:21
+      3   25.0%            /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      7   36.8%          Function: ^<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:730:32
+      4   57.1%            LazyCompile: *compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:569:21
+      3   42.9%            /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      5    7.9%        LazyCompile: *Template /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:507:18
+      5  100.0%          Function: ^compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:379:35
+      5  100.0%            Function: ^handleCache /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:208:21
+      3    4.8%        Function: ^format /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/fecha/lib/fecha.umd.js:246:25
+      3  100.0%          Function: ^<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/logform/timestamp.js:14:25
+      2   66.7%            Function: ^<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/logform/combine.js:17:10
+      1   33.3%            LazyCompile: *Writable.write /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_writable.js:288:37
+      3    4.8%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      3  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2   66.7%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1   33.3%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      3    4.8%        Function: ^Module node:internal/modules/cjs/loader:172:16
+      3  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      3  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      2    3.2%        Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1   50.0%          Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1   50.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      2    3.2%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      2  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      2  100.0%            Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      2    3.2%        Function: ^expressInit /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/middleware/init.js:29:30
+      1   50.0%          LazyCompile: *trim_prefix /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: *next /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/index.js:176:16
+      1   50.0%          Function: ^handle /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/index.js:288:23
+      2    3.2%        Function: ^createRegex /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:558:25
+      2  100.0%          Function: ^Template /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:507:18
+      2  100.0%            Function: ^compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:379:35
+      1    1.6%        LazyCompile: ~pathtoRegexp /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/path-to-regexp/index.js:28:22
+      1  100.0%          LazyCompile: ~Layer /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/layer.js:33:15
+      1  100.0%            LazyCompile: ~route /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/index.js:497:29
+      1    1.6%        LazyCompile: ~parseOpts /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:144:37
+      1  100.0%          LazyCompile: ~Run /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:78:13
+      1  100.0%            LazyCompile: ~exports.find /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1    1.6%        LazyCompile: ~parseCertString node:internal/tls/parse-cert-string:15:25
+      1  100.0%          LazyCompile: ~translatePeerCertificate node:_tls_common:124:34
+      1  100.0%            LazyCompile: ~translatePeerCertificate node:_tls_common:124:34
+      1    1.6%        LazyCompile: ~normalize node:path:1127:12
+      1  100.0%          LazyCompile: ~join node:path:1166:7
+      1  100.0%            Script: ~<anonymous> file:///home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/src/config.js:1:1
+      1    1.6%        LazyCompile: ~isIPv6 node:internal/net:35:16
+      1  100.0%          LazyCompile: ~isIP node:internal/net:39:14
+      1  100.0%            LazyCompile: ~parseSslOptions /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connect.js:228:25
+      1    1.6%        LazyCompile: ~format /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/fecha/lib/fecha.umd.js:246:25
+      1  100.0%          LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/logform/timestamp.js:14:25
+      1  100.0%            LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/logform/combine.js:17:10
+      1    1.6%        LazyCompile: ~Schema.virtual /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/schema.js:1773:36
+      1  100.0%          LazyCompile: ~addIdGetter /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/helpers/schema/idGetter.js:7:38
+      1  100.0%            LazyCompile: ~_preCompile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/schema.js:2206:52
+      1    1.6%        LazyCompile: ~Run /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/@mapbox/node-pre-gyp/lib/node-pre-gyp.js:78:13
+      1  100.0%          LazyCompile: ~exports.find /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1  100.0%            Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bcrypt/bcrypt.js:1:1
+      1    1.6%        LazyCompile: *formatRaw node:internal/util/inspect:796:19
+      1  100.0%          Function: ^formatValue node:internal/util/inspect:726:21
+      1  100.0%            Function: ^inspect node:internal/util/inspect:286:17
+      1    1.6%        LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    1.6%        Function: ~<anonymous> node:zlib:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    1.6%        Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/stack-trace/lib/stack-trace.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    1.6%        Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/body-parser/node_modules/debug/src/node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    1.6%        Function: ^stripSemi /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:362:19
+      1  100.0%          LazyCompile: *scanLine /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:803:22
+      1  100.0%            LazyCompile: *<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:730:32
+      1    1.6%        Function: ^stat node:internal/modules/cjs/loader:151:14
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1    1.6%        Function: ^splitRoot node:fs:2362:33
+      1  100.0%          LazyCompile: *realpathSync node:fs:2408:22
+      1  100.0%            Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1    1.6%        Function: ^pipe /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/send/index.js:510:43
+      1  100.0%          Function: ^serveStatic /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/serve-static/index.js:72:31
+      1  100.0%            Function: ^handle /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/layer.js:86:49
+      1    1.6%        Function: ^ondata /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_readable.js:679:18
+      1  100.0%          Function: ^emit node:events:340:44
+      1  100.0%            Function: ^addChunk /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_readable.js:295:18
+      1    1.6%        Function: ^format /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/content-type/index.js:65:17
+      1  100.0%          Function: ^setCharset /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/utils.js:246:41
+      1  100.0%            Function: ^send /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/response.js:107:25
+      1    1.6%        Function: ^exports.escapeXML /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/utils.js:94:30
+      1  100.0%          Function: ^<anonymous> :1:20
+      1  100.0%            Function: ^anonymous /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:684:59
+      1    1.6%        Function: ^ObjectId.toHexString /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/objectid.js:109:47
+      1  100.0%          Function: ^ObjectId.toString /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/objectid.js:162:44
+      1  100.0%            LazyCompile: ~ObjectId.equals /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/objectid.js:177:42
+      1    1.6%        Function: ^<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connect.js:80:43
+      1  100.0%          LazyCompile: ~prepareHandshakeDocument /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connect.js:145:34
+      1  100.0%            LazyCompile: ~performInitialHandshake /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connect.js:64:33
+     43    4.0%      Function: ^memoryUsage node:internal/process/per_thread:165:23
+     42   97.7%        Function: ^showAppInfo file:///home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/src/controllers/webServerController.js:27:28
+     42  100.0%          Function: ^handle /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/layer.js:86:49
+     42  100.0%            Function: ^next /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/route.js:114:16
+      1    2.3%        LazyCompile: ~showAppInfo file:///home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/src/controllers/webServerController.js:27:28
+      1  100.0%          Function: ^handle /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: ~next /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/route.js:114:16
+     34    3.2%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     28   82.4%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      5   17.9%          Function: ~<anonymous> node:crypto:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4   14.3%          Function: ~<anonymous> node:http:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    7.1%          Function: ~<anonymous> node:tls:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    7.1%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    7.1%          Function: ~<anonymous> node:internal/child_process:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    7.1%          Function: ~<anonymous> node:_http_agent:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.6%          LazyCompile: ~lazyLoadStreams node:fs:2841:25
+      1  100.0%            LazyCompile: ~get ReadStream node:fs:2984:17
+      1    3.6%          LazyCompile: ~initCJSParse node:internal/modules/esm/translators:63:28
+      1  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:168:60
+      1    3.6%          Function: ~<anonymous> node:tty:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.6%          Function: ~<anonymous> node:internal/crypto/pbkdf2:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.6%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.6%          Function: ~<anonymous> node:cluster:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.6%          Function: ~<anonymous> node:child_process:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.6%          Function: ~<anonymous> node:assert:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.6%          Function: ~<anonymous> node:_tls_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.6%          Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    3.6%          Function: ~<anonymous> node:_http_client:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5   14.7%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      5  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      5  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    2.9%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1  100.0%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+     18    1.7%      LazyCompile: *compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:569:21
+     18  100.0%        Function: ^compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:379:35
+     18  100.0%          Function: ^handleCache /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:208:21
+     10   55.6%            Function: ^tryHandleCache /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:252:24
+      8   44.4%            Function: ^includeFile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:307:21
+     18    1.7%      Function: ^openSync node:fs:576:18
+     18  100.0%        Function: ^readFileSync node:fs:450:22
+      9   50.0%          Function: ^fileLoader /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:290:20
+      8   88.9%            Function: ^handleCache /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:208:21
+      1   11.1%            LazyCompile: ~handleCache /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:208:21
+      7   38.9%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      5   71.4%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      2   28.6%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    5.6%          LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1158:39
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    5.6%          Function: ^cjsPreparseModuleExports node:internal/modules/esm/translators:212:34
+      1  100.0%            Function: ^commonjsStrategy node:internal/modules/esm/translators:168:60
+     16    1.5%      LazyCompile: *scanLine /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:803:22
+     12   75.0%        LazyCompile: *<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:730:32
+     10   83.3%          LazyCompile: *compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:569:21
+     10  100.0%            Function: ^compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:379:35
+      2   16.7%          /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      2  100.0%            Function: ^generateSource /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:709:28
+      4   25.0%        Function: ^<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:730:32
+      2   50.0%          LazyCompile: *compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:569:21
+      2  100.0%            Function: ^compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:379:35
+      2   50.0%          /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      2  100.0%            Function: ^generateSource /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:709:28
+     14    1.3%      Function: ^authenticate /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/passport/lib/middleware/authenticate.js:94:31
+      8   57.1%        Function: ^handle /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/layer.js:86:49
+      8  100.0%          Function: ^trim_prefix /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/index.js:288:23
+      7   87.5%            LazyCompile: *next /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/index.js:176:16
+      1   12.5%            Function: ^<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/index.js:275:64
+      6   42.9%        LazyCompile: *trim_prefix /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/index.js:288:23
+      6  100.0%          LazyCompile: *next /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/index.js:176:16
+      6  100.0%            Function: ^initialize /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/passport/lib/middleware/initialize.js:51:29
+     11    1.0%      LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      3   27.3%        Function: ^endReadable node:internal/streams/readable:1326:21
+      3  100.0%          Function: ^Readable.read node:internal/streams/readable:394:35
+      2   66.7%            Function: ^flow node:internal/streams/readable:1009:14
+      1   33.3%            Function: ^resume_ node:internal/streams/readable:985:17
+      2   18.2%        Function: ^resume node:internal/streams/readable:978:16
+      2  100.0%          Function: ^Readable.resume node:internal/streams/readable:964:37
+      2  100.0%            Function: ^_dump node:_http_incoming:364:49
+      2   18.2%        Function: ^onwrite node:internal/streams/writable:425:17
+      2  100.0%          Function: ^afterWriteDispatched node:internal/stream_base_commons:159:30
+      1   50.0%            Function: ^writevGeneric node:internal/stream_base_commons:126:23
+      1   50.0%            Function: ^writeGeneric node:internal/stream_base_commons:151:22
+      2   18.2%        Function: ^maybeReadMore /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_readable.js:558:23
+      2  100.0%          Function: ^addChunk /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_readable.js:295:18
+      2  100.0%            Function: ^readableAddChunk /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_readable.js:249:26
+      1    9.1%        Function: ^onwrite /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_writable.js:444:17
+      1  100.0%          Function: ^WritableState.onwrite /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_writable.js:159:27
+      1  100.0%            Function: ^log /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/winston/lib/winston/transports/console.js:44:6
+      1    9.1%        Function: ^onDestroy node:internal/streams/destroy:73:21
+      1  100.0%          Function: ^onError node:_http_incoming:374:17
+      1  100.0%            Function: ^_destroy node:_http_incoming:176:55
+     11    1.0%      Function: ^stat node:internal/modules/cjs/loader:151:14
+      7   63.6%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      7  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      7  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      4   36.4%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      4  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      4  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+     35    1.9%    LazyCompile: *compileFunction node:vm:308:25
+     21   60.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     21  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+     21  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     21  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+     14   40.0%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1055:37
+     14  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     14  100.0%          LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+     14  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+
+    116    4.9%  epoll_pwait
+
+     58    2.5%  __write
+     36   62.1%    /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      3    8.3%      /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      1   33.3%        LazyCompile: ~primordials.SafePromisePrototypeFinally node:internal/per_context/primordials:409:43
+      1  100.0%          LazyCompile: ~readFile node:internal/fs/promises:786:24
+      1  100.0%            /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      1   33.3%        LazyCompile: ~module.exports /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/minimist/index.js:1:27
+      1  100.0%          Script: ~<anonymous> file:///home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/src/config.js:1:1
+      1  100.0%            /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      1   33.3%        LazyCompile: ~forProperties /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/winston/lib/winston/common.js:52:16
+      1  100.0%          Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/winston/lib/winston.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      2    5.6%      LazyCompile: ~listOnTimeout node:internal/timers:505:25
+      2  100.0%        Function: ^processTimers node:internal/timers:485:25
+      1    2.8%      LazyCompile: ~value node:internal/console/constructor:320:20
+      1  100.0%        LazyCompile: ~log node:internal/console/constructor:358:6
+      1  100.0%          /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      1  100.0%            LazyCompile: ~showAppInfo file:///home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/src/controllers/webServerController.js:27:28
+      1    2.8%      LazyCompile: ~validate_config /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1  100.0%        LazyCompile: ~exports.find /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1  100.0%          Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bcrypt/bcrypt.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    2.8%      LazyCompile: ~update /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/topology_description.js:142:11
+      1  100.0%        Function: ^serverUpdateHandler /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/topology.js:366:24
+      1  100.0%          Function: ^<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/topology.js:530:53
+      1  100.0%            Function: ^emit node:events:340:44
+      1    2.8%      LazyCompile: ~transform /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/logform/printf.js:10:12
+      1  100.0%        Function: ^<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/logform/combine.js:17:10
+      1  100.0%          Function: ^_write /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/winston-transport/index.js:69:51
+      1  100.0%            Function: ^doWrite /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_writable.js:404:17
+      1    2.8%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%        LazyCompile: ~tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%          LazyCompile: ~tryPackage node:internal/modules/cjs/loader:338:20
+      1  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1    2.8%      LazyCompile: ~realpathSync node:fs:2408:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%          LazyCompile: ~tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            LazyCompile: ~tryPackage node:internal/modules/cjs/loader:338:20
+      1    2.8%      LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    2.8%      LazyCompile: ~processIncomingData /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1  100.0%        Function: ^_write /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1  100.0%          Function: ^writeOrBuffer node:internal/streams/writable:365:23
+      1  100.0%            Function: ^_write node:internal/streams/writable:283:16
+      1    2.8%      LazyCompile: ~open node:internal/fs/promises:449:20
+      1  100.0%        LazyCompile: ~readFile node:internal/fs/promises:786:24
+      1  100.0%          LazyCompile: ~defaultGetSource node:internal/modules/esm/get_source:25:32
+      1  100.0%            LazyCompile: ~defaultLoad node:internal/modules/esm/load:7:27
+      1    2.8%      LazyCompile: ~onParseError node:internal/url:551:22
+      1  100.0%        /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      1  100.0%          Function: ^URL node:internal/url:620:14
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:981:24
+      1    2.8%      LazyCompile: ~compareTopologyVersion /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/server_description.js:184:32
+      1  100.0%        Function: ^isStaleServerDescription /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/topology.js:660:34
+      1  100.0%          LazyCompile: ~serverUpdateHandler /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/topology.js:366:24
+      1  100.0%            Function: ^<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/topology.js:530:53
+      1    2.8%      LazyCompile: ~command /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connection.js:162:12
+      1  100.0%        LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/server.js:184:42
+      1  100.0%          LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connection_pool.js:265:23
+      1  100.0%            LazyCompile: ~processWaitQueue /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connection_pool.js:418:26
+      1    2.8%      LazyCompile: ~checkServer /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/monitor.js:139:21
+      1  100.0%        LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/monitor.js:223:12
+      1  100.0%          LazyCompile: ~executeAndReschedule /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/utils.js:788:34
+      1  100.0%            LazyCompile: ~listOnTimeout node:internal/timers:505:25
+      1    2.8%      LazyCompile: ~afterConnect node:net:1119:22
+      1    2.8%      LazyCompile: ~_storeHeader node:_http_outgoing:374:22
+      1  100.0%        LazyCompile: ~writeHead node:_http_server:269:19
+      1  100.0%          LazyCompile: ~writeHead /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/on-headers/index.js:28:29
+      1  100.0%            LazyCompile: ~writeHead /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/on-headers/index.js:28:29
+      1    2.8%      LazyCompile: ~_addListener node:events:418:22
+      1  100.0%        Function: ^addListener node:events:486:58
+      1  100.0%          LazyCompile: ~Readable.on /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_readable.js:804:34
+      1  100.0%            LazyCompile: ~Readable.pipe /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_readable.js:608:36
+      1    2.8%      LazyCompile: ~URL node:internal/url:620:14
+      1  100.0%        LazyCompile: ~pathToFileURL node:internal/url:1455:23
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/modules/run_main:47:29
+      1  100.0%            LazyCompile: ~loadESM node:internal/process/esm_loader:85:41
+      1    2.8%      LazyCompile: ~TopologyDescription /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/topology_description.js:29:16
+      1  100.0%        LazyCompile: ~update /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/topology_description.js:142:11
+      1  100.0%          LazyCompile: ~serverUpdateHandler /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/topology.js:366:24
+      1  100.0%            LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/topology.js:530:53
+      1    2.8%      LazyCompile: ~SchemaType /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/schematype.js:40:20
+      1  100.0%        LazyCompile: ~SchemaString /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/schema/string.js:24:22
+      1  100.0%          LazyCompile: ~Schema.interpretAsType /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/schema.js:919:44
+      1  100.0%            LazyCompile: ~Schema.path /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/schema.js:655:33
+      1    2.8%      LazyCompile: ~Pager.set /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/memory-pager/index.js:81:32
+      1  100.0%        LazyCompile: ~Bitfield /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/sparse-bitfield/index.js:5:19
+      1  100.0%          LazyCompile: ~Bitfield /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/sparse-bitfield/index.js:5:19
+      1  100.0%            LazyCompile: ~read /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/saslprep/lib/memory-code-points.js:15:14
+      1    2.8%      LazyCompile: ~Long.isLong /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/long.js:236:28
+      1  100.0%        LazyCompile: ~Long.equals /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/long.js:427:38
+      1  100.0%          LazyCompile: ~Long.eq /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/long.js:435:34
+      1  100.0%            LazyCompile: ~Long.negate /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/long.js:612:38
+      1    2.8%      LazyCompile: ~IncomingMessage node:_http_incoming:51:25
+      1  100.0%        LazyCompile: ~parserOnHeadersComplete node:_http_common:77:33
+      1    2.8%      LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/utils.js:791:12
+      1  100.0%        LazyCompile: ~done /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/monitor.js:225:22
+      1  100.0%          LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/monitor.js:231:30
+      1  100.0%            LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/monitor.js:201:52
+      1    2.8%      LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/utils.js:496:13
+      1  100.0%        LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/operations/execute_operation.js:48:47
+      1  100.0%          LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/utils.js:496:13
+      1  100.0%            LazyCompile: ~completeEndSession /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sessions.js:138:40
+      1    2.8%      LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/auth/scram.js:152:83
+      1  100.0%        LazyCompile: ~messageHandler /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connection.js:416:35
+      1  100.0%          Function: ^emit node:events:340:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1    2.8%      Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/socket.io/dist/uws.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    2.8%      Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_readable.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    2.8%      Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/faker/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    2.8%      Function: ^serializeInto /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%        Function: ^serializeObject /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/parser/serializer.js:258:25
+      1  100.0%          Function: ^serializeInto /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%            Function: ^serializeObject /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/parser/serializer.js:258:25
+      1    2.8%      Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    2.8%      Function: ^B node:internal/deps/cjs-module-lexer/dist/lexer:1:824
+      1  100.0%        Function: ^parse node:internal/deps/cjs-module-lexer/dist/lexer:1:131
+      1  100.0%          Function: ^cjsPreparseModuleExports node:internal/modules/esm/translators:212:34
+      1  100.0%            Function: ^commonjsStrategy node:internal/modules/esm/translators:168:60
+     17   29.3%    LazyCompile: *compileFunction node:vm:308:25
+     10   58.8%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1055:37
+     10  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     10  100.0%          LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+     10  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      7   41.2%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      7  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      7  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      7  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+
+     55    2.3%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     31   56.4%    /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+     10   32.3%      /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      2   20.0%        LazyCompile: *scanLine /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:803:22
+      1   50.0%          LazyCompile: *<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:730:32
+      1  100.0%            LazyCompile: *compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:569:21
+      1   50.0%          Function: ^<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:730:32
+      1  100.0%            /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      1   10.0%        LazyCompile: ~scanLine /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:803:22
+      1  100.0%          LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:730:32
+      1  100.0%            /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      1   10.0%        LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1   10.0%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1   10.0%        Function: ^createRegex /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:558:25
+      1  100.0%          Function: ^Template /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:507:18
+      1  100.0%            Function: ^compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:379:35
+      1   10.0%        Function: ^clearBuffer node:internal/streams/writable:529:21
+      1  100.0%          Function: ^Writable.uncork node:internal/streams/writable:341:37
+      1  100.0%            Function: ^end node:_http_outgoing:833:45
+      1   10.0%        Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1   10.0%        Function: ^FastBuffer node:internal/buffer:958:14
+      1  100.0%          Function: ^randomBytes node:internal/crypto/random:90:21
+      1  100.0%            Function: ^randomBytesSync /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/random-bytes/index.js:72:25
+      1   10.0%        Function: ^<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:730:32
+      1  100.0%          LazyCompile: *compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:569:21
+      1  100.0%            Function: ^compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:379:35
+      3    9.7%      LazyCompile: *readPackage node:internal/modules/cjs/loader:290:21
+      2   66.7%        LazyCompile: *readPackageScope node:internal/modules/cjs/loader:321:26
+      1   50.0%          Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1   50.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1   33.3%        Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%          Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2    6.5%      Function: ^parse /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/content-type/index.js:106:16
+      2  100.0%        Function: ^setCharset /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/utils.js:246:41
+      2  100.0%          Function: ^send /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/response.js:107:25
+      2  100.0%            Function: ^done /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/response.js:1011:27
+      1    3.2%      LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    3.2%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:23:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    3.2%      LazyCompile: ~nextTick node:internal/process/task_queues:104:18
+      1  100.0%        LazyCompile: ~resume /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_readable.js:902:16
+      1  100.0%          LazyCompile: ~Readable.resume /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_readable.js:886:38
+      1  100.0%            LazyCompile: ~Readable.on /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_readable.js:804:34
+      1    3.2%      LazyCompile: ~error /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/send/index.js:267:45
+      1  100.0%        LazyCompile: ~onStatError /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/send/index.js:416:57
+      1  100.0%          LazyCompile: ~next /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/send/index.js:732:17
+      1  100.0%            LazyCompile: ~onstat /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/send/index.js:721:33
+      1    3.2%      LazyCompile: ~contentType /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/response.js:599:32
+      1  100.0%        LazyCompile: ~send /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/response.js:107:25
+      1  100.0%          LazyCompile: ~done /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/response.js:1011:27
+      1  100.0%            LazyCompile: ~tryHandleCache /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:252:24
+      1    3.2%      LazyCompile: ~command /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connection.js:162:12
+      1  100.0%        LazyCompile: ~continueScramConversation /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      1  100.0%          LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/auth/scram.js:85:80
+      1  100.0%            LazyCompile: ~messageHandler /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connection.js:416:35
+      1    3.2%      LazyCompile: ~_write /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1  100.0%        LazyCompile: ~writeOrBuffer node:internal/streams/writable:365:23
+      1  100.0%          LazyCompile: ~_write node:internal/streams/writable:283:16
+      1  100.0%            LazyCompile: ~Writable.write node:internal/streams/writable:333:36
+      1    3.2%      LazyCompile: ~Readable.pipe node:internal/streams/readable:654:35
+      1  100.0%        LazyCompile: ~Connection /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connection.js:38:16
+      1  100.0%          LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connect.js:33:63
+      1  100.0%            LazyCompile: ~callback /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connect.js:260:31
+      1    3.2%      LazyCompile: ~Faker /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/faker/lib/index.js:24:16
+      1  100.0%        Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/faker/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    3.2%      LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connection_pool.js:364:44
+      1  100.0%        LazyCompile: ~callback /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connect.js:65:31
+      1  100.0%          LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connect.js:134:44
+      1  100.0%            LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/auth/scram.js:152:83
+      1    3.2%      LazyCompile: *stat node:internal/modules/cjs/loader:151:14
+      1  100.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    3.2%      LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1  100.0%            Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/faker/lib/locales/fa/commerce/index.js:1:1
+      1    3.2%      Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/drivers/node-mongodb-native/binary.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    3.2%      Function: ^randomBytes node:internal/crypto/random:90:21
+      1  100.0%        Function: ^randomBytesSync /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/random-bytes/index.js:72:25
+      1  100.0%          Function: ^uidSync /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/uid-safe/index.js:75:18
+      1  100.0%            Function: ^generateSessionId /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express-session/index.js:518:27
+      1    3.2%      Function: ^applyStyle /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/colors/lib/colors.js:113:20
+      1  100.0%        Function: ^builder /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/colors/lib/colors.js:86:33
+      1  100.0%          Function: ^colorize /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/logform/colorize.js:63:11
+      1  100.0%            Function: ^transform /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/logform/colorize.js:92:12
+      1    3.2%      Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+     11   20.0%    LazyCompile: *compileFunction node:vm:308:25
+      8   72.7%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      8  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      8  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      8  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      3   27.3%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1055:37
+      3  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      3  100.0%          LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      3  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    1.8%    LazyCompile: *realpathSync node:fs:2408:22
+      1  100.0%      LazyCompile: *tryExtensions node:internal/modules/cjs/loader:400:23
+      1  100.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+
+     53    2.2%  fwrite
+     26   49.1%    LazyCompile: *compileFunction node:vm:308:25
+     21   80.8%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     21  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+     21  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     21  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      5   19.2%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1055:37
+      5  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      5  100.0%          LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      5  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+     25   47.2%    /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      2    8.0%      LazyCompile: ~value node:internal/console/constructor:320:20
+      2  100.0%        LazyCompile: ~log node:internal/console/constructor:358:6
+      2  100.0%          /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      2  100.0%            LazyCompile: ~showAppInfo file:///home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/src/controllers/webServerController.js:27:28
+      1    4.0%      LazyCompile: ~store.generate /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express-session/index.js:158:28
+      1  100.0%        LazyCompile: ~generate /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express-session/index.js:363:22
+      1  100.0%          LazyCompile: ~session /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express-session/index.js:179:26
+      1  100.0%            LazyCompile: ~handle /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/express/lib/router/layer.js:86:49
+      1    4.0%      LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:142:29
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:23:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.0%      LazyCompile: ~randomFill node:internal/crypto/random:144:20
+      1  100.0%        LazyCompile: ~randomBytes node:internal/crypto/random:90:21
+      1  100.0%          LazyCompile: ~prepare /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/auth/scram.js:16:12
+      1  100.0%            LazyCompile: ~prepareHandshakeDocument /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connect.js:145:34
+      1    4.0%      LazyCompile: ~preferredEncodings /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/negotiator/lib/encoding.js:138:28
+      1  100.0%        LazyCompile: ~encodings /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/negotiator/index.js:52:52
+      1  100.0%          LazyCompile: ~Accepts.encoding.Accepts.encodings /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/accepts/index.js:127:40
+      1  100.0%            LazyCompile: ~onResponseHeaders /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/compression/index.js:140:47
+      1    4.0%      LazyCompile: ~peek /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/utils.js:959:9
+      1  100.0%        LazyCompile: ~processIncomingData /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1  100.0%          LazyCompile: ~_write /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1  100.0%            LazyCompile: ~writeOrBuffer node:internal/streams/writable:365:23
+      1    4.0%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:82:28
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:23:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.0%      LazyCompile: ~parse /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/commands.js:577:10
+      1  100.0%        LazyCompile: ~messageHandler /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connection.js:416:35
+      1  100.0%          Function: ^emit node:events:340:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1    4.0%      LazyCompile: ~onParseError node:internal/url:551:22
+      1  100.0%        /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      1  100.0%          Function: ^URL node:internal/url:620:14
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:981:24
+      1    4.0%      LazyCompile: ~moduleProvider node:internal/modules/esm/loader:229:28
+      1  100.0%        /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      1    4.0%      LazyCompile: ~log /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/winston/lib/winston/transports/console.js:44:6
+      1  100.0%        LazyCompile: ~_write /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/winston-transport/index.js:69:51
+      1  100.0%          LazyCompile: ~doWrite /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_writable.js:404:17
+      1  100.0%            LazyCompile: ~writeOrBuffer /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/readable-stream/lib/_stream_writable.js:363:23
+      1    4.0%      LazyCompile: ~exports.toCollectionName /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/utils.js:37:36
+      1  100.0%        LazyCompile: ~Mongoose._model /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/index.js:534:37
+      1  100.0%          LazyCompile: ~Mongoose.model /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/index.js:470:36
+      1  100.0%            LazyCompile: ~ContenedorMongoDB file:///home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/src/models/ContenedorMongoDB.js:33:14
+      1    4.0%      LazyCompile: ~enabled /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/@dabh/diagnostics/diagnostics.js:55:17
+      1  100.0%        LazyCompile: ~dev /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/@dabh/diagnostics/node/development.js:12:38
+      1  100.0%          Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/winston/lib/winston/exception-handler.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    4.0%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:133:19
+      1  100.0%          LazyCompile: ~useColors /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/debug/src/node.js:155:19
+      1  100.0%            LazyCompile: ~createDebug /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/debug/src/common.js:60:22
+      1    4.0%      LazyCompile: ~compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:569:21
+      1  100.0%        LazyCompile: ~compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:379:35
+      1  100.0%          LazyCompile: ~handleCache /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:208:21
+      1  100.0%            LazyCompile: ~tryHandleCache /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:252:24
+      1    4.0%      LazyCompile: ~ServerResponse node:_http_server:178:24
+      1  100.0%        LazyCompile: ~parserOnIncoming node:_http_server:852:26
+      1  100.0%          LazyCompile: ~parserOnHeadersComplete node:_http_common:77:33
+      1    4.0%      LazyCompile: ~Response /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/commands.js:346:16
+      1  100.0%        LazyCompile: ~processIncomingData /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1  100.0%          LazyCompile: ~_write /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1  100.0%            LazyCompile: ~writeOrBuffer node:internal/streams/writable:365:23
+      1    4.0%      LazyCompile: ~ObjectId /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/bson/lib/objectid.js:23:22
+      1  100.0%        LazyCompile: ~NativeCollection.<computed> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:75:43
+      1  100.0%          LazyCompile: ~create /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/model.js:1720:26
+      1  100.0%            LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/model.js:1777:21
+      1    4.0%      LazyCompile: ~Authenticator.init /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/passport/lib/authenticator.js:29:40
+      1  100.0%        LazyCompile: ~Authenticator /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/passport/lib/authenticator.js:13:23
+      1  100.0%          Function: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/passport/lib/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    4.0%      LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/helpers/model/applyStaticHooks.js:12:24
+      1  100.0%        /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      1  100.0%          LazyCompile: ~Kareem.filter /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/kareem/index.js:329:35
+      1  100.0%            LazyCompile: ~applyStaticHooks /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongoose/lib/helpers/model/applyStaticHooks.js:6:43
+      1    4.0%      LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/monitor.js:201:52
+      1  100.0%        LazyCompile: ~callback /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connect.js:65:31
+      1  100.0%          LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connect.js:90:85
+      1  100.0%            LazyCompile: ~messageHandler /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connection.js:416:35
+      1    4.0%      LazyCompile: ~<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/sdam/monitor.js:173:73
+      1  100.0%        Function: ^messageHandler /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/connection.js:416:35
+      1  100.0%          Function: ^emit node:events:340:44
+      1  100.0%            Function: ^processIncomingData /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1    4.0%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      1    4.0%      /home/sereprec/.nvm/versions/node/v16.13.0/bin/node
+      1  100.0%        LazyCompile: *scanLine /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:803:22
+      1  100.0%          LazyCompile: *<anonymous> /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:730:32
+      1  100.0%            LazyCompile: *compile /home/sereprec/Escritorio/CoderHouse/Backend/Clase32/desafio16-PrellezoSergio/node_modules/ejs/lib/ejs.js:569:21
+
