@@ -25,23 +25,7 @@ export const getProductosMock = (req, res) => {
 };
 
 export const showAppInfo = (req, res) => {
-  console.log(
-    "Esta es la app info para presentar:\n",
-    JSON.stringify({
-      title: "App Info",
-      SO: process.platform,
-      nodeVersion: process.version,
-      execPath: process.execPath,
-      proyectPath: process.cwd(),
-      args:
-        process.argv.length > 2 ? process.argv.slice(2).join(", ") : "ninguno",
-      pid: process.pid,
-      rss: Math.round(process.memoryUsage().rss / 1024),
-      CPUs: config.numCPUs
-    })
-  );
-
-  res.render("./pages/appInfo", {
+  const info = {
     title: "App Info",
     SO: process.platform,
     nodeVersion: process.version,
@@ -52,5 +36,14 @@ export const showAppInfo = (req, res) => {
     pid: process.pid,
     rss: Math.round(process.memoryUsage().rss / 1024),
     CPUs: config.numCPUs
-  });
+  };
+
+  //--->>>>> Activar o desactivar el console.log para testeos
+  // console.log(
+  //   "Probando el efecto del console.log en el rendimiento\nEsta es la app info para presentar:\n",
+  //   info
+  // );
+  //---<<<<<<
+
+  res.render("./pages/appInfo", info);
 };
