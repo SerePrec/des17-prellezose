@@ -5,7 +5,7 @@ import { logger } from "../logger/index.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const ACTIVE_RANDOMS_CHILD_PROCESS = false;
+const ACTIVE_RANDOMS_CHILD_PROCESS = true;
 
 export const getRandoms = (req, res) => {
   if (ACTIVE_RANDOMS_CHILD_PROCESS) {
